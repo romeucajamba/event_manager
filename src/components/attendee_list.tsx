@@ -1,7 +1,9 @@
 import { Search, MoreHorizontal, ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight } from 'lucide-react';
 import { IconButton } from './icon_button';
 import { Table } from './table';
-
+import { Theader } from './theader';
+import { TdCell } from './tdCell';
+import { TableRow } from './tableRow';
 
 
 export function AttendeeList(){
@@ -17,41 +19,41 @@ export function AttendeeList(){
 
         <Table>
             <thead>
-                <tr className='border-b border-white/10'>
-                    <th style={{width: 48}} className='py-3 px-4 text-sm font-semibold text-left'>
+                <TableRow >
+                    <Theader style={{width: 48}}>
                         <input type="checkbox" className='size-4 bg-black/20 rounded border-white/10'/>
-                    </th>
-                    <th className='py-3 px-4 text-sm font-semibold text-left'>Código</th>
-                    <th className='py-3 px-4 text-sm font-semibold text-left'>Participantes</th>
-                    <th className='py-3 px-4 text-sm font-semibold text-left'>Data de inscrição</th>
-                    <th className='py-3 px-4 text-sm font-semibold text-left'>Data do ticket</th>
-                    <th style={{width: 64}} className='py-3 px-4 text-sm font-semibold text-left'>
+                    </Theader>
+                    <Theader>Código</Theader>
+                    <Theader>Participantes</Theader>
+                    <Theader>Data de inscrição</Theader>
+                    <Theader>Data do ticket</Theader>
+                    <Theader style={{width: 64}} >
                         
-                    </th>
-                </tr>
+                    </Theader>
+                </TableRow>
             </thead>
             <tbody>
                {
                 Array.from({length: 5}).map((_, index) => {
                     return(
                         <tr key={index} className='border-b border-white/10 hover:bg-white/5'>
-                        <td className='py-3 px-4 text-sm font-semibold text-zinc-300'>
+                        <TdCell className='py-3 px-4 text-sm font-semibold text-zinc-300'>
                                 <input type="checkbox" className='size-4 bg-black/20 rounded border-white/10' />
-                            </td>
-                            <td className='py-3 px-4 text-sm text-zinc-300'>5357</td>
-                            <td className='py-3 px-4 text-sm text-zinc-300'>
+                            </TdCell>
+                            <TdCell>5357</TdCell>
+                            <TdCell>
                                 <div className='flex flex-col gap-1'>
                                     <span className='font-semibold text-white'>Romeu Cajamba</span>
                                     <span>romeucajamba@gmail.com</span>
                                 </div>
-                            </td>
-                            <td className='py-3 px-4 text-sm text-zinc-300'>7 dias atrás</td>
-                            <td className='py-3 px-4 text-sm text-zinc-300'>3 dias atrás</td>
-                            <th className='py-3 px-4 text-sm font-semibold text-left'>
+                            </TdCell>
+                            <TdCell>7 dias atrás</TdCell>
+                            <TdCell>3 dias atrás</TdCell>
+                            <TdCell>
                             <IconButton transparent>
                                 <MoreHorizontal className='size-4 text-white'/>
                             </IconButton>
-                            </th>
+                            </TdCell>
                         </tr>
                     )
                 })
@@ -60,10 +62,10 @@ export function AttendeeList(){
             </tbody>
             <tfoot>
                 <tr>
-                    <td className='py-3 px-4 text-sm text-zinc-300' colSpan={3}>
+                    <TdCell className='py-3 px-4 text-sm text-zinc-300' colSpan={3}>
                         Mostrando 10 de 228
-                    </td>
-                    <td className='py-3 px-4 text-sm text-zinc-300 text-right' colSpan={3}>
+                    </TdCell>
+                    <TdCell className='text-right' colSpan={3}>
                        <div className='inline-flex items-center gap-8'>
                             <span>página 1 de 23</span>
 
@@ -82,7 +84,7 @@ export function AttendeeList(){
                                 </IconButton>
                             </div>
                        </div>
-                    </td>
+                    </TdCell>
                 </tr>
             </tfoot>
         </Table>
