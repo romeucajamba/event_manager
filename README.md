@@ -12,12 +12,21 @@ npm create vite@latest
 npm run dev
 - Para iniciar o servidor Vite ou rodar o projeto
 
-
 ## Nodejs 
-- Runtime javaScipt com o seu gerenciador de pacotes npm
+- Runtime javaScipt com o seu gerenciador de pacotes npm 
+- <img align="center" height="50" width="50" alt="nodejs-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
+
+## React
+- biblioteca Javascript para criação de interfaces de aplicaões fronted
+- <img align="center" height="50" width="50" alt="react-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+
+## HTML
+- Linguagem de Híper marcação de Texto
+- <img align="center" height="50" width="50" alt="html-icon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
 
 ## Typescript 
 - Linguagem de programação para tipagens estáticas
+- <img align="center" alt="Rafa-Ts" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
 
 ## Lucide-react
 npm i lucide-react
@@ -26,6 +35,7 @@ npm i lucide-react
 ## Tailwind-marge
 npm i tailwind-merge
 - Para unir estilos
+- <img align="center" alt="Rafa-Tailwind" height="50" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg">
 
 ## Faker JS
 npm i @faker-js/faker --save-dev
