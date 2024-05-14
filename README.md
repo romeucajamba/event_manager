@@ -21,3 +21,7 @@ npm i tailwind-merge
 ## Faker JS
 npm i @faker-js/faker --save-dev
 - Para gerar dados ficticios
+
+## Date FNS
+npm i date-fns
+- Para formatação de data

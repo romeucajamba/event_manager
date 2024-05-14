@@ -5,6 +5,8 @@ import { Theader } from './theader';
 import { TdCell } from './tdCell';
 import { TableRow } from './tableRow';
 import { attendees} from '../data/attendeeList';
+import { pt} from 'date-fns/locale';
+import { formatRelative } from 'date-fns';
 
 
 export function AttendeeList(){
@@ -48,8 +50,8 @@ export function AttendeeList(){
                                     <span>{attendee.email}</span>
                                 </div>
                             </TdCell>
-                            <TdCell>{attendee.createdAt.toISOString()}</TdCell>
-                            <TdCell>{attendee.checkedInAt.toISOString()}</TdCell>
+                            <TdCell>{formatRelative(attendee.createdAt, new Date(), {locale:pt })}</TdCell>
+                            <TdCell>{formatRelative(attendee.checkedInAt, new Date(), {locale:pt })}</TdCell>
                             <TdCell>
                             <IconButton transparent>
                                 <MoreHorizontal className='size-4 text-white'/>
