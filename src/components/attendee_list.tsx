@@ -4,6 +4,7 @@ import { Table } from './table';
 import { Theader } from './theader';
 import { TdCell } from './tdCell';
 import { TableRow } from './tableRow';
+import { attendees} from '../data/attendeeList';
 
 
 export function AttendeeList(){
@@ -34,21 +35,21 @@ export function AttendeeList(){
             </thead>
             <tbody>
                {
-                Array.from({length: 5}).map((_, index) => {
+                attendees.map(( attendee ) => {
                     return(
-                        <tr key={index} className='border-b border-white/10 hover:bg-white/5'>
+                        <tr key={attendee.id} className='border-b border-white/10 hover:bg-white/5'>
                         <TdCell className='py-3 px-4 text-sm font-semibold text-zinc-300'>
                                 <input type="checkbox" className='size-4 bg-black/20 rounded border-white/10' />
                             </TdCell>
-                            <TdCell>5357</TdCell>
+                            <TdCell>{attendee.id}</TdCell>
                             <TdCell>
                                 <div className='flex flex-col gap-1'>
-                                    <span className='font-semibold text-white'>Romeu Cajamba</span>
-                                    <span>romeucajamba@gmail.com</span>
+                                    <span className='font-semibold text-white'>{attendee.name}</span>
+                                    <span>{attendee.email}</span>
                                 </div>
                             </TdCell>
-                            <TdCell>7 dias atrás</TdCell>
-                            <TdCell>3 dias atrás</TdCell>
+                            <TdCell>{attendee.createdAt.toISOString()}</TdCell>
+                            <TdCell>{attendee.checkedInAt.toISOString()}</TdCell>
                             <TdCell>
                             <IconButton transparent>
                                 <MoreHorizontal className='size-4 text-white'/>
