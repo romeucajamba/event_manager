@@ -10,13 +10,13 @@ Typescript - linguagem de programação para tipagens estáticas
 ## Vite
 npm create vite@latest
 
-## Lucide-react - biblioteca para icones
+## Lucide-react
 npm i lucide-react
--biblioteca de icones
+- biblioteca de icones
 
 ## Tailwind-marge
 npm i tailwind-merge
-- Para unir estilo
+- Para unir estilos
 
 ## Faker JS
 npm i @faker-js/faker --save-dev
