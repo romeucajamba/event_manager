@@ -1,5 +1,5 @@
 import Icon from '../../public/Rectangle 592.png';
-
+import { NavLink } from './navLink';
 
 export function Header() {
     return(
@@ -7,9 +7,9 @@ export function Header() {
 
             <img src={Icon} alt="icon_yhanko" />
 
-            <nav className='flex items-center gap-5 py-5'>
-                <a href="#" target="_blank" className='font-medium text-sm text-zinc-400'>Eventos</a>    
-                <a href="#" target="_blank" className='font-medium text-sm'>Participantes</a>
+            <nav className='flex items-center gap-5 py-5'>   
+                <NavLink href="/eventos">Eventos</NavLink>
+                <NavLink href="/participantes">Participantes</NavLink>
             </nav>
 
         </header>
