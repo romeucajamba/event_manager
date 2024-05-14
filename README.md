@@ -4,11 +4,20 @@ Um sistema que cria eventos, cadastra participantes e gera tikets para cada part
 
 
 ## Dependências || tecnologias
-Nodejs - runtime javaScipt com o seu gerenciador de pacotes npm
-Typescript - linguagem de programação para tipagens estáticas
 
 ## Vite
+- Vite é um servidor de desenvolvimento local, e usado por padrão pelo Vue e para modelos de projeto React. Tem suporte para TypeScript e JSX.
 npm create vite@latest
+- Para criar um projeto
+npm run dev
+- Para iniciar o servidor Vite ou rodar o projeto
+
+
+## Nodejs 
+- Runtime javaScipt com o seu gerenciador de pacotes npm
+
+## Typescript 
+- Linguagem de programação para tipagens estáticas
 
 ## Lucide-react
 npm i lucide-react
