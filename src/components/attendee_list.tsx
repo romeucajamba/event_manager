@@ -1,5 +1,6 @@
 import { Search, MoreHorizontal, ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight } from 'lucide-react';
 import { IconButton } from './icon_button';
+import { Table } from './table';
 
 
 
@@ -14,8 +15,7 @@ export function AttendeeList(){
              </div>
            </div>
 
-            <div className='border border-white/10 rounded-lg'>
-            <table className='w-full'>
+        <Table>
             <thead>
                 <tr className='border-b border-white/10'>
                     <th style={{width: 48}} className='py-3 px-4 text-sm font-semibold text-left'>
@@ -85,8 +85,7 @@ export function AttendeeList(){
                     </td>
                 </tr>
             </tfoot>
-           </table>
-            </div>
+        </Table>
            
         </main>
     )
