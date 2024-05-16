@@ -48,3 +48,7 @@ npm i @faker-js/faker --save-dev
 ## Date FNS
 npm i date-fns
 - Para formatação de data
+
+## Axios
+- npm i axios
+- Para consumir a API

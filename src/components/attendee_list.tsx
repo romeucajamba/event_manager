@@ -4,15 +4,19 @@ import { Table } from './table';
 import { Theader } from './theader';
 import { TdCell } from './tdCell';
 import { TableRow } from './tableRow';
-import { attendees} from '../data/attendeeList';
+import { attendees } from '../data/attendeeList'
+
 import { pt} from 'date-fns/locale';
 import { formatRelative } from 'date-fns';
 import { ChangeEvent, useState } from 'react';
 
 
+
+
 export function AttendeeList(){
     const [search, setsearch] = useState('')
     const [page, setPage] = useState(0)
+
     const totalPages = Math.ceil(attendees.length / 10)
 
     function onSearchInput(event: ChangeEvent<HTMLInputElement>){
@@ -34,6 +38,8 @@ export function AttendeeList(){
     function goToLastPage(){
         setPage(totalPages)
     }
+    
+
 
     return(
         <main className='flex flex-col gap-4'>
@@ -41,9 +47,8 @@ export function AttendeeList(){
              <h1 className="text-2xl font-bold">Lista de participantes</h1>
              <div className="w-72 px-3 py-1.5 border border-white/10 rounded-lg text-sm flex items-center gap-3">
                 <Search className='size-4 text-[#610CE1]'/>
-                <input onChange={onSearchInput} type="text" placeholder="pesquisar participante" className="bg-transparent flex-1 outline-none border-0 p-0 text-sm" />
+                <input onChange={onSearchInput}  value={search} type="text" placeholder="pesquisar participante" className="bg-transparent flex-1 outline-none border-0 p-0 text-sm focus:ring-0" />
              </div>
-                {search}
            </div>
 
         <Table>
@@ -63,6 +68,7 @@ export function AttendeeList(){
             </thead>
             <tbody>
                {
+                //Pagianação para retornar apenas 10 participantes
                 attendees.slice(page, 10).map(( attendee ) => {
                     return(
                         <tr key={attendee.id} className='border-b border-white/10 hover:bg-white/5'>
@@ -77,7 +83,7 @@ export function AttendeeList(){
                                 </div>
                             </TdCell>
                             <TdCell>{formatRelative(attendee.createdAt, new Date(), {locale:pt })}</TdCell>
-                            <TdCell>{formatRelative(attendee.checkedInAt, new Date(), {locale:pt })}</TdCell>
+                            <TdCell>{formatRelative(attendee.checkedInAt ,new Date(), {locale:pt })}</TdCell>
                             <TdCell>
                             <IconButton transparent>
                                 <MoreHorizontal className='size-4 text-white'/>

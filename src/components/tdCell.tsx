@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { twMerge} from 'tailwind-merge';
 
 
-interface TdCellProps extends ComponentProps<'th'>{}
+interface TdCellProps extends ComponentProps<'td'>{}
 
 
 export function TdCell(props: TdCellProps){
