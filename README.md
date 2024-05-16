@@ -53,4 +53,4 @@ npm i date-fns
 ######
 ### Tela
 ###
-<img src="./public//attendees.PNG" height="35" width="35" />
+<img src="./public//attendees.PNG" height="70" width="70" />
