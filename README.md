@@ -49,6 +49,8 @@ npm i @faker-js/faker --save-dev
 npm i date-fns
 - Para formatação de data
 
-## Axios
-- npm i axios
-- Para consumir a API
+
+######
+### Tela
+###
+<img src="./public//attendees.PNG" height="35" width="35" />
